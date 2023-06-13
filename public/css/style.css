@@ -1,47 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;800&display=swap');
 
 * {
-    font-family: 'Baloo 2', cursive !important;
+  font-family: 'Baloo 2', cursive !important;
 }
 
 .header {
-    background-color: #1BBA96;
+  background-color: #1BBA96;
 }
 
 
 .login-button {
-    background-color: #386069;
-    color: #fff;
+  background-color: #386069;
+  color: #fff;
 }
 
 .login-button:hover {
-    background-color: #4F8692;
-    color: #fff;
+  background-color: #4F8692;
+  color: #fff;
 }
 
 .hero-text {
-    font-weight: 800 !important;
-    font-size: 63px;
-    color: #fff;
+  font-weight: 800 !important;
+  font-size: 63px;
+  color: #fff;
 }
 
 .selengkapnya-button {
-    background-color: #FC8348;
-    color: #fff;
+  background-color: #FC8348;
+  color: #fff;
 }
 
 .selengkapnya-button:hover {
-    /* border-color: #386069; */
-    background-color: #D46E3C;
-    color: #fff;
+  /* border-color: #386069; */
+  background-color: #D46E3C;
+  color: #fff;
 }
 
 .selengkapnya-button:active {
-    background-color: #B15C32 !important;
-    color: #fff !important;
-    border-color: #B15C32 !important;
+  background-color: #B15C32 !important;
+  color: #fff !important;
+  border-color: #B15C32 !important;
 }
 
 .services-title {
-    font-weight: 800 !important;
+  font-weight: 800 !important;
+}
+
+.bg-navbar-auth {
+  background-color: #1BBA96;
+}
+
+@media screen and (max-width: 767px) {
+  .hero-text {
+    font-size: 40px;
+  }
+
+  .services {
+    height: 100vh;
+  }
 }
