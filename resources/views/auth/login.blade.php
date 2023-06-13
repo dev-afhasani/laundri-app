@@ -1,12 +1,11 @@
 @extends('auth.main')
 
-@section('title', 'Register')
+@section('title', 'Login')
 
 @section('container')
 <div class="container">
 
   <div class="col-12 col-md-6 col-lg-6 bg-info mx-auto my-5 py-5 px-3 rounded">
-    <h1 class="text-center mb-5">Register</h1>
 
     @if (session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -14,18 +13,19 @@
       <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
+
+    @if (session('error'))
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      {{ session('error') }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+
+
+    <h1 class="text-center mb-3">Login</h1>
+
     <form action="" method="post">
       @csrf
-      <div class="form-floating mb-3">
-        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Masukkan nama" value="{{old('name')}}" required>
-        <label for="floatingInput">Nama</label>
-        @error('name')
-        <div class="invalid-feedback">
-          {{$message}}
-        </div>
-        @enderror
-      </div>
-
 
       <div class="form-floating mb-3">
         <input type="email" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="Masukkan email" value="{{old('email')}}" required>
@@ -38,7 +38,7 @@
       </div>
 
 
-      <div class="form-floating mb-3">
+      <div class="form-floating mb-4">
         <input type="password" class="form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="Password" required>
         <label for="floatingPassword">Kata Sandi</label>
         @error('password')
@@ -48,30 +48,22 @@
         @enderror
       </div>
 
-
-      <div class="form-floating mb-4">
-        <input type="password" class="form-control @error('password') is-invalid @enderror" id="password2" name="password_confirmation" placeholder="Password" required>
-        <label for="floatingPassword">Konfirmasi Kata Sandi</label>
-        @error('password')
-        <div class="invalid-feedback">
-          {{$message}}
-        </div>
-        @enderror
-      </div>
-
-
       <div class="d-grid">
-        <button class="btn btn-primary ">Register</button>
+        <button class="btn btn-primary ">Login</button>
       </div>
     </form>
 
     <hr>
     <div class="text-center">
-      <a href="/login" class="text-decoration-none" type="submit">Sudah punya akun? Login!</a>
+      <a href="/register" class="text-decoration-none" type="submit">Belum punya akun? Daftar!</a>
     </div>
 
   </div>
 
 
 </div>
+
+
+
+
 @endsection

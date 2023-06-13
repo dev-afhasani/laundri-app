@@ -1,8 +1,10 @@
 <?php
 
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Member\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,7 @@ Route::get('/', function () {
 
 Route::get('register', [RegisterController::class, 'show'])->name('register.show');
 Route::post('register', [RegisterController::class, 'register'])->name('register.register');
+
+Route::get('login', [LoginController::class, 'show'])->name('login.show')->middleware('islogin');
+Route::post('login', [LoginController::class, 'authenticate'])->name('login.authenticate');
+Route::get('logout', [LoginController::class, 'logout'])->name('login.logout');

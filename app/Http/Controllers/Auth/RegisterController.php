@@ -31,6 +31,6 @@ class RegisterController extends Controller
   {
     User::create($request->safe()->all());
 
-    return redirect()->route('register.show')->with('success', 'Berhasil register');
+    return redirect()->route('login.show')->with('success', 'Berhasil register');
   }
 }
