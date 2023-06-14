@@ -40,6 +40,11 @@ class RouteServiceProvider extends ServiceProvider
         ->prefix('member')
         ->as('member.')
         ->group(base_path('routes/web/member.php'));
+
+      Route::middleware(['web', 'islogin'])
+        ->prefix('admin')
+        ->as('admin.')
+        ->group(base_path('routes/web/admin.php'));
     });
   }
 }
