@@ -35,7 +35,7 @@
         </ul>
 
         <div class="col-md-3 text-end">
-          <button type="button" class="btn fs-4 login-button">Login</button>
+          <a href="/login" class="btn fs-4 login-button">Login</a>
         </div>
       </header>
     </div>

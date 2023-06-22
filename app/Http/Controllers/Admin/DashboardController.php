@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Enums\Role;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
 use App\Http\Controllers\Controller;
@@ -13,6 +15,11 @@ class DashboardController extends Controller
   {
     $user = Auth::user();
 
-    return view('admin.index');
+    $membersCount = User::where('role', Role::Member)->count();
+
+    return view('admin.index', compact(
+      'user',
+      'membersCount'
+    ));
   }
 }
