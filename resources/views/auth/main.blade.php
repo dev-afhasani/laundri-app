@@ -12,7 +12,7 @@
 <body>
   <nav class="navbar bg-navbar-auth">
     <div class="container ">
-      <a class="navbar-brand" href="#">Laundri</a>
+      <a class="navbar-brand" href="">Laundri</a>
     </div>
   </nav>
 

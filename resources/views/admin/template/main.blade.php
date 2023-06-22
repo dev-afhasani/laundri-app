@@ -15,9 +15,7 @@
   <link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
-
   @yield('css')
-
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -30,7 +28,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="" class="brand-link mt-2" style="text-decoration: none;">
+      <a href="/admin" class="brand-link mt-2" style="text-decoration: none;">
         <i class="fas fa-tshirt brand-image mt-1 ml-3"></i>
         <h4 class="brand-text text-center">Laundri</h4>
       </a>
@@ -54,13 +52,13 @@
     </footer>
 
 
-
   </div>
 
   <!-- Logout Modal -->
   <x-admin.modals.logout-modal />
 
   @yield('modals')
+
 
 
   <!-- jQuery -->
@@ -82,4 +80,4 @@
 
 </body>
 
-</html>l
+</html>

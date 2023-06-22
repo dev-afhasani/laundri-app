@@ -22,13 +22,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.price-lists.index') ? 'active' : '' }}">
+        <a href="{{ route('admin.price-lists.index') }}" class="nav-link {{ request()->routeIs('admin.price-lists.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-list"></i>
           <p>Daftar Harga</p>
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.members*') ? 'active' : '' }}">
+        <a href="{{ route('admin.members.index') }}" class="nav-link {{ request()->routeIs('admin.members*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-users"></i>
           <p>Daftar Member</p>
         </a>
@@ -58,7 +58,7 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link" data-toggle="modal" data-target="#logoutModal">
+        <a href="" class="nav-link" data-toggle="modal" data-target="#logoutModal">
           <i class="nav-icon fas fa-sign-out-alt"></i>
           <p>Logout</p>
         </a>
