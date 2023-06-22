@@ -20,7 +20,7 @@
 <div class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-4">
+      <div class="col-sm-12 col-md-6 col-lg-4">
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
@@ -30,21 +30,21 @@
           <div class="icon">
             <i class="ion ion-ios-people"></i>
           </div>
-          <a href="" class="small-box-footer">Lihat member <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{ route('admin.members.index') }}" class="small-box-footer">Lihat member <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
-      <div class="col-4">
+      <div class="col-sm-12 col-md-6 col-lg-4">
         <!-- small box -->
         <div class="small-box bg-info">
           <div class="inner">
             <p>Jumlah Transaksi</p>
 
-            <h3>0</h3>
+            <h3>{{ $transactionsCount }}</h3>
           </div>
           <div class="icon">
             <i class="ion ion-bag"></i>
           </div>
-          <a href="" class="small-box-footer">Lihat transaksi <i class="fas fa-arrow-circle-right"></i></a>
+          <a href="{{ route('admin.transactions.index') }}" class="small-box-footer">Lihat transaksi <i class="fas fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <div class="col-4">
