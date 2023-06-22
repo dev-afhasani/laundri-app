@@ -6,6 +6,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Database\Seeders\ItemSeeder;
 use Database\Seeders\UserSeeder;
+use Database\Seeders\StatusSeeder;
 use Database\Seeders\ServiceSeeder;
 use Database\Seeders\CategorySeeder;
 use Database\Seeders\ServiceTypeSeeder;
@@ -22,7 +23,8 @@ class DatabaseSeeder extends Seeder
       CategorySeeder::class,
       ItemSeeder::class,
       ServiceSeeder::class,
-      ServiceTypeSeeder::class
+      ServiceTypeSeeder::class,
+      StatusSeeder::class
 
     ]);
     // \App\Models\User::factory(10)->create();

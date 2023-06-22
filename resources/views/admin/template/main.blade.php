@@ -29,7 +29,6 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
       <a href="/admin" class="brand-link mt-2" style="text-decoration: none;">
-        <i class="fas fa-tshirt brand-image mt-1 ml-3"></i>
         <h4 class="brand-text text-center">Laundri</h4>
       </a>
 

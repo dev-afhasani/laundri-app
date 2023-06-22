@@ -4,9 +4,13 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\ServiceController;
+use App\Http\Controllers\Admin\VoucherController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PriceListController;
 use App\Http\Controllers\Admin\ServiceTypeController;
+use App\Http\Controllers\Admin\Transaction\TransactionController;
+use App\Http\Controllers\Admin\Transaction\PrintTransactionController;
+use App\Http\Controllers\Admin\Transaction\TransactionSessionController;
 
 Route::get('/', [DashboardController::class, 'index'])->name('index');
 Route::get('/members', [MemberController::class, 'index'])->name('members.index');
@@ -31,4 +35,29 @@ Route::group([
 ], function () {
   Route::get('/{serviceType}', [ServiceTypeController::class, 'show'])->name('show');
   Route::patch('/{serviceType}', [ServiceTypeController::class, 'update'])->name('update');
+});
+
+Route::group([
+  'prefix' => 'vouchers',
+  'as' => 'vouchers.',
+], function () {
+  Route::get('/', [VoucherController::class, 'index'])->name('index');
+  Route::post('/', [VoucherController::class, 'store'])->name('store');
+  Route::patch('/{voucher}', [VoucherController::class, 'update'])->name('update');
+});
+
+Route::group([
+  'prefix' => 'transactions',
+  'as' => 'transactions.',
+], function () {
+  Route::get('/create', [TransactionController::class, 'create'])->name('create');
+  Route::get('/', [TransactionController::class, 'index'])->name('index');
+  Route::post('/', [TransactionController::class, 'store'])->name('store');
+  Route::get('/{transaction}', [TransactionController::class, 'show'])->name('show');
+  Route::patch('/{transaction}', [TransactionController::class, 'update'])->name('update');
+
+  Route::post('/session', [TransactionSessionController::class, 'store'])->name('session.store');
+  Route::get('/session/{rowId}', [TransactionSessionController::class, 'destroy'])->name('session.destroy');
+
+  Route::get('/print/{transaction}', [PrintTransactionController::class, 'index'])->name('print.index');
 });

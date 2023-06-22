@@ -10,13 +10,13 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.transactions.create') ? 'active' : '' }}">
+        <a href="{{ route('admin.transactions.create') }}" class="nav-link {{ request()->routeIs('admin.transactions.create') ? 'active' : '' }}">
           <i class="nav-icon fas fa-file-invoice"></i>
           <p>Input Transaksi</p>
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.transactions.index') ? 'active' : '' }}">
+        <a href="{{ route('admin.transactions.index') }}" class="nav-link {{ request()->routeIs('admin.transactions.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-history"></i>
           <p>Riwayat Transaksi</p>
         </a>
@@ -34,27 +34,15 @@
         </a>
       </li>
       <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.vouchers.index') ? 'active' : '' }}">
+        <a href="{{ route('admin.vouchers.index') }}" class="nav-link {{ request()->routeIs('admin.vouchers.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-star"></i>
           <p>Voucher</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.complaint-suggestions.index') ? 'active' : '' }}">
-          <i class="nav-icon fas fa-sticky-note"></i>
-          <p>Saran / Komplain</p>
         </a>
       </li>
       <li class="nav-item">
         <a href="" class="nav-link {{ request()->routeIs('admin.reports.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-file-alt"></i>
           <p>Laporan Keuangan</p>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('profile.index') ? 'active' : '' }}">
-          <i class="nav-icon fas fa-user-edit"></i>
-          <p>Edit Profil</p>
         </a>
       </li>
       <li class="nav-item">
