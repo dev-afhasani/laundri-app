@@ -65,7 +65,19 @@
                 </tr>
               </thead>
               <tbody>
-
+                @foreach ($priorityTransactions as $transaction)
+                <tr>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ date('d F Y', strtotime($transaction->created_at)) }}</td>
+                  <td>
+                    @if ($transaction->status_id != '3')
+                    <span class="text-warning">{{ $transaction->status->name }}</span>
+                    @else
+                    <span class="text-success">{{ $transaction->status->name }}</span>
+                    @endif
+                  </td>
+                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
@@ -82,7 +94,19 @@
                 </tr>
               </thead>
               <tbody>
-
+                @foreach ($recentTransactions as $transaction)
+                <tr>
+                  <td>{{ $loop->iteration }}</td>
+                  <td>{{ date('d F Y', strtotime($transaction->created_at)) }}</td>
+                  <td>
+                    @if ($transaction->status_id != '3')
+                    <span class="text-warning">{{ $transaction->status->name }}</span>
+                    @else
+                    <span class="text-success">{{ $transaction->status->name }}</span>
+                    @endif
+                  </td>
+                </tr>
+                @endforeach
               </tbody>
             </table>
           </div>

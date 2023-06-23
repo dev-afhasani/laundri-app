@@ -156,6 +156,7 @@
     });
   });
 </script>
+
 @if (session('id_trs'))
 <script type="text/javascript">
   window.open("{{ route('admin.transactions.print.index', ['transaction' => session('id_trs')]) }}', '_blank");

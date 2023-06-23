@@ -5,12 +5,13 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 use App\Enums\Role;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Hash;
-use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
@@ -52,6 +53,27 @@ class User extends Authenticatable
   ];
 
   /**
+   * Transaction relation
+   *
+   * @return \Illuminate\Database\Eloquent\Relations\HasMany
+   */
+  public function transactions(): HasMany
+  {
+    return $this->hasMany(Transaction::class, 'member_id');
+  }
+
+  /**
+   * Vouchers relation
+   *
+   * @return \Illuminate\Database\Eloquent\Relations\HasMany
+   */
+  public function vouchers(): HasMany
+  {
+    return $this->hasMany(UserVoucher::class);
+  }
+
+
+  /**
    * Return column name for storing file name
    *
    * @return string
@@ -87,14 +109,14 @@ class User extends Authenticatable
    *
    * @return string|null
    */
-  public function getFileAsset(): ?string
-  {
-    if (!$this->hasFile() || $this->isDefaultFileName()) {
-      return asset('img/profile/' . $this->getDefaultFileName());
-    }
+  // public function getFileAsset(): ?string
+  // {
+  //   if (!$this->hasFile() || $this->isDefaultFileName()) {
+  //     return asset('img/profile/' . $this->getDefaultFileName());
+  //   }
 
-    return $this->getFileStorage()->url($this->getFullFilePath());
-  }
+  //   return $this->getFileStorage()->url($this->getFullFilePath());
+  // }
 
   /**
    * Password mutator

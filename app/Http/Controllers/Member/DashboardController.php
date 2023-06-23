@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers\Member;
 
-use App\Http\Controllers\Controller;
+use App\Models\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
@@ -16,7 +17,12 @@ class DashboardController extends Controller
     if (!$user) {
       abort(403);
     }
+    $latestTransactions = Transaction::with('status')->where('member_id', $user->id)
+      ->orderBy('created_at', 'DESC')
+      ->orderBy('status_id', 'ASC')
+      ->limit(10)
+      ->get();
 
-    return view('member.index');
+    return view('member.index', compact('user', 'latestTransactions'));
   }
 }

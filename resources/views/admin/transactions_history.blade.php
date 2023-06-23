@@ -222,7 +222,7 @@
                   <td>{{ $item->getFormattedServiceCost() }}</td>
                   <td>{{ $item->getFormattedTotal() }}</td>
                   <td>
-                    <a href="#" class="badge badge-info btn-detail" data-toggle="modal" data-target="#transactionDetailModal" data-id="{{ $item->id }}">Detail</a>
+                    <a href="" class="badge badge-info btn-detail" data-toggle="modal" data-target="#transactionDetailModal" data-id="{{ $item->id }}">Detail</a>
                     <a href="{{ route('admin.transactions.print.index', ['transaction' => $item->id]) }}" class="badge badge-primary" target="_blank">Cetak</a>
                   </td>
                 </tr>
@@ -249,9 +249,15 @@
 <script src="{{ asset('js/ajax.js') }}" type="text/javascript"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#tbl-transaksi-selesai').DataTable();
-    $('#tbl-transaksi-belum').DataTable();
-    $('#tbl-transaksi-priority').DataTable();
+    $('#tbl-transaksi-selesai').DataTable({
+      "bInfo": false
+    });
+    $('#tbl-transaksi-belum').DataTable({
+      "bInfo": false
+    });
+    $('#tbl-transaksi-priority').DataTable({
+      "bInfo": false
+    });
   });
 </script>
 @endsection

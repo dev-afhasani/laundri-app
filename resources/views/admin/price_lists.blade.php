@@ -54,18 +54,18 @@
             <form action="{{ route('admin.price-lists.store') }}" method="post">
               @csrf
               <div class="row">
-                <div class="col-6">
+                <div class="col-sm-8 col-md-6">
                   <div class="form-group">
                     <label for="barang">Barang</label>
                     <div class="row">
-                      <div class="col-8">
+                      <div class="col-8 col-sm-8">
                         <select class="form-control" id="barang" name="item">
                           @foreach ($items as $item)
                           <option value="{{ $item->id }}">{{ $item->name }}</option>
                           @endforeach
                         </select>
                       </div>
-                      <div class="col-4">
+                      <div class="col-4 col-sm-4">
                         <a id="tambah-barang" class="text-white btn btn-primary" data-toggle="modal" data-target="#addItemModal"><i class="fas fa-plus"></i>
                           Barang</a>
                       </div>
@@ -89,7 +89,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-4 col-md-6">
                   <div class="form-group">
                     <label for="kategori">Kategori</label>
                     <select class="form-control" id="kategori" name="category">
@@ -171,9 +171,10 @@
               </div>
             </div>
             <hr>
+
             <h5 class="mt-3">Daftar Tipe Service</h5>
-            <div class="tab-content mt-3" id="myTabContent">
-              <table id="tbl-kiloan" class="table dataTable dt-responsive nowrap" style="width:100%">
+            <div class="tab-content mt-3" id="myTabContent" role="tabpanel">
+              <table id="tbl-servis" class="table dataTable dt-responsive nowrap" style="width:100%">
                 <thead class="thead-light">
                   <tr>
                     <th>No</th>
@@ -222,8 +223,15 @@
 <script src="{{ asset('js/ajax-harga.js') }}"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#tbl-satuan').DataTable();
-    $('#tbl-kiloan').DataTable();
+    $('#tbl-satuan').DataTable({
+      "bInfo": false
+    });
+    $('#tbl-kiloan').DataTable({
+      "bInfo": false
+    });
+    $('#tbl-servis').DataTable({
+      "bInfo": false
+    });
   });
 </script>
 @endsection
