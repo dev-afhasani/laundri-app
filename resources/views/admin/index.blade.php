@@ -53,7 +53,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-body">
             <h3 class="mb-3">Transaksi Berjalan (Priority Service): </h3>
             <table class="table">
@@ -81,7 +81,7 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div> -->
         <div class="card">
           <div class="card-body">
             <h3 class="mb-3">Transaksi Berjalan: </h3>
@@ -89,6 +89,7 @@
               <thead class="thead-light">
                 <tr>
                   <th>No</th>
+                  <th>Nama Member</th>
                   <th>Tanggal</th>
                   <th>Status</th>
                 </tr>
@@ -97,6 +98,7 @@
                 @foreach ($recentTransactions as $transaction)
                 <tr>
                   <td>{{ $loop->iteration }}</td>
+                  <td>{{ $transaction->member->name }}</td>
                   <td>{{ date('d F Y', strtotime($transaction->created_at)) }}</td>
                   <td>
                     @if ($transaction->status_id != '3')

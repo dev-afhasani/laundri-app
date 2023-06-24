@@ -70,7 +70,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-body">
             <h4 class="mb-3">Transaksi Berjalan (Priority Service)</h4>
             <table id="tbl-transaksi-priority" class="table dt-responsive nowrap" style="width: 100%">
@@ -120,7 +120,7 @@
               </tbody>
             </table>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="row">

@@ -27,14 +27,14 @@
                 <div class="member-content">
                   <h2 class="m-0">{{ $user->name }}</h2>
                   <p class="small m-0">ID Member: {{ $user->id }}</p>
-                  <p class="small m-0 d-block d-sm-none">Point: {{ $user->point }}</p>
-                  <a href="{{ route('member.points.index') }}" class="badge badge-primary badge-pill d-sm-none">Tukar Poin</a>
+                  <!-- <p class="small m-0 d-block d-sm-none">Point: {{ $user->point }}</p>
+                  <a href="{{ route('member.points.index') }}" class="badge badge-primary badge-pill d-sm-none">Tukar Poin</a> -->
                 </div>
               </div>
               <div class="col-2 d-none d-sm-block text-center">
-                <p class="small m-0">Poin</p>
-                <h2 class="m-0">{{ $user->point }}</h2>
-                <a href="{{ route('member.points.index') }}" class="badge badge-primary badge-pill">Tukar Poin</a>
+                <!-- <p class="small m-0">Poin</p> -->
+                <!-- <h2 class="m-0">{{ $user->point }}</h2>
+                <a href="{{ route('member.points.index') }}" class="badge badge-primary badge-pill">Tukar Poin</a> -->
               </div>
             </div>
           </div>

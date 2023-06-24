@@ -29,8 +29,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="voucher">Voucher</label>
-            <select name="voucher" class="form-control form-control-lg" id="voucher">
+            <label for="voucher" class="d-none">Voucher</label>
+            <select name="voucher" class="form-control form-control-lg" id="voucher" hidden='true'>
               @if (isset($vouchers) && !blank($vouchers))
               <option value="0" data-potong="0">Pilih voucher</option>
               @foreach ($vouchers as $voucher)

@@ -14,8 +14,8 @@ class ServiceSeeder extends Seeder
   public function run(): void
   {
     Service::insert([
-      ['name' => 'Cuci kering', 'created_at' => now(), 'updated_at' => now()],
-      ['name' => 'Cuci setrika', 'created_at' => now(), 'updated_at' => now()]
+      ['name' => 'Cuci setrika', 'created_at' => now(), 'updated_at' => now()],
+      ['name' => 'Cuci kering', 'created_at' => now(), 'updated_at' => now()]
     ]);
   }
 }

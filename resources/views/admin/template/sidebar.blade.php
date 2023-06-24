@@ -33,12 +33,12 @@
           <p>Daftar Member</p>
         </a>
       </li>
-      <li class="nav-item">
-        <a href="{{ route('admin.vouchers.index') }}" class="nav-link {{ request()->routeIs('admin.vouchers.index') ? 'active' : '' }}">
+      <!-- <li class="nav-item">
+        <a href="" class="nav-link {{ request()->routeIs('admin.vouchers.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-star"></i>
           <p>Voucher</p>
         </a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a href="" class="nav-link {{ request()->routeIs('admin.reports.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-file-alt"></i>

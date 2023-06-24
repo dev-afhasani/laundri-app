@@ -21,12 +21,12 @@
           <p>Riwayat Transaksi</p>
         </a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a href="{{ route('member.points.index') }}" class="nav-link {{ request()->routeIs('member.points.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-star"></i>
           <p>Tukar Poin</p>
         </a>
-      </li>
+      </li> -->
       <li class="nav-item">
 
       </li>
