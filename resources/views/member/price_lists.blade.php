@@ -84,7 +84,7 @@
           <div class="card-body">
             <h5 class="mt-3">Daftar Tipe Service</h5>
             <div class="tab-content mt-3" id="myTabContent">
-              <table id="tbl-kiloan" class="table dataTable dt-responsive nowrap" style="width:100%">
+              <table id="tbl-servis" class="table dataTable dt-responsive nowrap" style="width:100%">
                 <thead class="thead-light">
                   <tr>
                     <th>No</th>
@@ -120,8 +120,18 @@
 <script src="{{ asset('vendor/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
 <script type="text/javascript">
   $(document).ready(function() {
-    $('#tbl-satuan').DataTable();
-    $('#tbl-kiloan').DataTable();
+    $('#tbl-satuan').DataTable({
+      "bInfo": false,
+      "bLengthChange": false,
+    });
+    $('#tbl-kiloan').DataTable({
+      "bInfo": false,
+      "bLengthChange": false,
+    });
+    $('#tbl-servis').DataTable({
+      "bInfo": false,
+      "bLengthChange": false,
+    });
   });
 </script>
 @endsection

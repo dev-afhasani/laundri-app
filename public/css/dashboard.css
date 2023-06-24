@@ -1,4 +1,11 @@
-.dashboard-navbar {
-  padding-left: 10px;
-  padding-right: 10px;
+.sidebar-bg {
+  background-color: #1BBA96;
+}
+
+nav>ul>li>a>p {
+  color: white;
+}
+
+nav>ul>li>a>i {
+  color: white;
 }

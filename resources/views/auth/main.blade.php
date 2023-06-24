@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/auth.css">
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.png" type="image/x-icon">
 </head>
 
-<body>
+<body class="bg-auth">
   <nav class="navbar bg-navbar-auth">
-    <div class="container ">
-      <a class="navbar-brand" href="">Laundri</a>
+    <div class="container mt-2">
+      <a class="navbar-brand fw-bold" href="/">Laundri</a>
     </div>
   </nav>
 

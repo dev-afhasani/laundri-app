@@ -5,8 +5,8 @@
 @section('container')
 <div class="container">
 
-  <div class="col-12 col-md-6 col-lg-6 bg-info mx-auto my-5 py-5 px-3 rounded">
-    <h1 class="text-center mb-5">Register</h1>
+  <div class="col-12 col-sm-11 col-md-8 col-lg-6 bg-light mx-auto mt-4 mb-4 px-3 py-5 px-5 rounded shadow-lg">
+    <h2 class="text-center mb-5">Register</h2>
 
     @if (session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -17,7 +17,7 @@
     <form action="" method="post">
       @csrf
       <div class="form-floating mb-3">
-        <input type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Masukkan nama" value="{{old('name')}}" required>
+        <input autofocus type="text" class="form-control @error('name') is-invalid @enderror" id="name" name="name" placeholder="Masukkan nama" value="{{old('name')}}" required>
         <label for="floatingInput">Nama</label>
         @error('name')
         <div class="invalid-feedback">
@@ -67,11 +67,12 @@
 
     <hr>
     <div class="text-center">
-      <a href="/login" class="text-decoration-none" type="submit">Sudah punya akun? Login!</a>
+      <a href="/login" class="text-decoration-none text-color-theme" type="submit">Sudah punya akun? Login!</a>
     </div>
 
   </div>
 
+  <p class="text-center mb-4 fw-semibold">Copyright &copy; 2023 Laundri All rights reserved.</p>
 
 </div>
 @endsection

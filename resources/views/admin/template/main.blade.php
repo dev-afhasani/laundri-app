@@ -27,10 +27,10 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-bg elevation-5">
       <!-- Brand Logo -->
       <a href="/admin" class="brand-link mt-2" style="text-decoration: none;">
-        <h4 class="brand-text text-center">Laundri</h4>
+        <h4 class="brand-text text-center text-light">Laundri</h4>
       </a>
 
       <!-- Sidebar -->

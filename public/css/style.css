@@ -8,10 +8,14 @@
   background-color: #1BBA96;
 }
 
+.nav-link {
+  font-size: 24px;
+}
 
 .login-button {
   background-color: #386069;
   color: #fff;
+  font-size: 24px;
 }
 
 .login-button:hover {
@@ -25,18 +29,19 @@
   color: #fff;
 }
 
-.selengkapnya-button {
+.selengkapnya-text {
   background-color: #FC8348;
   color: #fff;
+  font-size: 22px;
 }
 
-.selengkapnya-button:hover {
+.selengkapnya-text:hover {
   /* border-color: #386069; */
   background-color: #D46E3C;
   color: #fff;
 }
 
-.selengkapnya-button:active {
+.selengkapnya-text:active {
   background-color: #B15C32 !important;
   color: #fff !important;
   border-color: #B15C32 !important;
@@ -46,16 +51,96 @@
   font-weight: 800 !important;
 }
 
-.bg-navbar-auth {
-  background-color: #1BBA96;
+.about-title {
+  font-weight: 800 !important;
 }
 
-@media screen and (max-width: 767px) {
-  .hero-text {
-    font-size: 40px;
+.about-us-text {
+  font-size: 1.4em;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-link {
+    font-size: 15px;
   }
 
-  .services {
-    height: 100vh;
+  .login-button {
+    font-size: 15px;
   }
+
+  .hero-image {
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+
+  .hero-text {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .sub-hero-text {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .selengkapnya-text {
+    font-size: 16px;
+  }
+
+  .selengkapnya-button {
+    text-align: center;
+  }
+
+  .login-button {
+    font-size: 16px;
+  }
+
+  /* .services {
+    height: 100vh;
+  } */
+
+  .header-home {
+    margin-bottom: 0px;
+  }
+
+  .about-us-text {
+    font-size: 1em;
+  }
+}
+
+@media screen and (min-width:769px) and (max-width: 992px) {
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .login-button {
+    font-size: 18px;
+  }
+
+  .hero-text {
+    font-size: 36px;
+    /* text-align: center; */
+  }
+
+  .sub-hero-text {
+    font-size: 18px;
+    /* text-align: center; */
+  }
+
+  .selengkapnya-text {
+    font-size: 16px;
+  }
+
+
+
+  /* .selengkapnya-button {
+    text-align: center;
+  } */
+}
+
+@media screen and (min-width: 993px) {
+  .container-fluid {
+    margin-bottom: 40px;
+  }
+
 }

@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body">
         <h5>ID Transaksi: <span id="id-transaksi-detail"></span></h5>
-        <table id="tbl-detail-transaksi" class="table dt-responsive nowrap" style="width: 100%">
+        <table id="" class="table dt-responsive nowrap table-responsive" style="width: 100%">
           <thead class="thead-light">
             <tr>
               <th>No</th>

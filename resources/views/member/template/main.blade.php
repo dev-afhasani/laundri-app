@@ -16,7 +16,7 @@
   @yield('css')
 </head>
 
-<body>
+<body class="hold-transition sidebar-mini">
   <div class="wrapper">
 
     <!-- Navbar -->
@@ -24,11 +24,10 @@
     <!-- /.navbar -->
 
     <!-- Main Sidebar Container -->
-    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <aside class="main-sidebar sidebar-bg elevation-5">
       <!-- Brand Logo -->
       <a href="" class="brand-link mt-2">
-        <i class="fas fa-tshirt brand-image mt-1 ml-3"></i>
-        <h4 class="brand-text text-center">{{ config('app.name') }}</h4>
+        <h4 class="brand-text text-center text-light">{{ config('app.name') }}</h4>
       </a>
 
       <!-- Sidebar -->
