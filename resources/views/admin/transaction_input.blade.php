@@ -48,9 +48,28 @@
             <form action="{{ route('admin.transactions.session.store') }}" method="post">
               @csrf
               <div class="form-group row">
+                <label for="name-member" class="col-sm-2 col-md-2 col-form-label">Nama Member</label>
+                <div class="col-sm-6 col-md-4">
+                  <select class="form-control" id="id-member" name="member-id">
+                    <option value="" disabled selected>Pilih nama member</option>
+                    @if (isset($memberIdSessionTransaction))
+                    <option value="{{ $memberIdSessionTransaction }}" selected>{{ $memberName[$memberIdSessionTransaction-2]->name }} </option>
+
+                    @else
+                    @foreach ($memberName as $name)
+                    <option value="{{ $name->id }}">{{ $name->name }} </option>
+
+                    @endforeach
+                    @endif
+
+
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row d-none">
                 <label for="id-member" class="col-sm-2 col-md-2 col-form-label">ID Member</label>
                 <div class="col-sm-6 col-md-4">
-                  <input type="number" min="1" class="form-control" id="id-member" name="member-id" @if (isset($memberIdSessionTransaction)) value="{{ $memberIdSessionTransaction }}" disabled title="Harap selesaikan transaksi yang ada untuk mengganti id member" @endif required>
+                  <!-- <input type="number" min="1" class="form-control" id="id-member" name="member-id" @if (isset($memberIdSessionTransaction)) value="{{ $memberIdSessionTransaction }}" disabled title="Harap selesaikan transaksi yang ada untuk mengganti id member" @endif required> -->
                 </div>
               </div>
               <div class="form-group row">
