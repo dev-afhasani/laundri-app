@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> Member </title>
+  <title> @yield('title') </title>
+
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.png" type="image/x-icon">
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
@@ -26,8 +29,8 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-bg elevation-5">
       <!-- Brand Logo -->
-      <a href="" class="brand-link mt-2">
-        <h4 class="brand-text text-center text-light">{{ config('app.name') }}</h4>
+      <a href="/member" class="brand-link mt-2">
+        <h4 class="brand-text text-center text-light">Laundri</h4>
       </a>
 
       <!-- Sidebar -->

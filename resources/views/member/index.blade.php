@@ -1,4 +1,7 @@
 @extends('member.template.main')
+
+@section('title', 'Dashboard Pelanggan')
+
 @section('css')
 <link href="{{ asset('vendor/datatables-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 <link href="{{ asset('vendor/datatables-responsive/css/responsive.bootstrap4.min.css') }}" rel="stylesheet">
@@ -9,7 +12,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark">Dashboard Member</h1>
+        <h1 class="m-0 text-dark">Dashboard Pelanggan</h1>
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->

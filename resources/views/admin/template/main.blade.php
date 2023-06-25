@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>@yield('title')</title>
 
+  <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}">
   <!-- Theme style -->

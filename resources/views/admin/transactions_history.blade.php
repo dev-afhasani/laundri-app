@@ -188,7 +188,7 @@
                 <tr>
                   <th>ID Transaksi</th>
                   <th>Tanggal</th>
-                  <th>Nama Member</th>
+                  <th>Nama Pelanggan</th>
                   <th>Status</th>
                   <th>Biaya Service</th>
                   <th>Total Harga</th>
