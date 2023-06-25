@@ -36,9 +36,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link active" href="/">Beranda</a></li>
-              <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
-              <li class="nav-item"><a class="nav-link" href="#about-us">Tentang Kami</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="/">Beranda</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#services">Layanan</a></li>
+              <li class="nav-item"><a class="nav-link text-light" href="#about-us">Tentang Kami</a></li>
             </ul>
             <ul class="navbar-nav ms-auto">
               <li>
@@ -597,7 +597,7 @@
   <div class="services">
     <div class="container my-5">
       <h1 class="services-title fs-2 text-center mb-5">Kenapa pilih layanan kami?</h1>
-      <div class="row text-center justify-content-center">
+      <div class="row pt-5 text-center justify-content-center">
         <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-5">
           <img src="/img/bro.svg" alt="" srcset="">
           <h4 class="mt-3">Besoknya langsung siap</h4>
@@ -614,7 +614,7 @@
     </div>
   </div>
 
-  <div class="header" id="about-us">
+  <div class="about-container" id="about-us">
     <div class="container py-5">
       <h1 class="about-title fs-2 text-center mb-5">Tentang Kami</h1>
       <div class="row justify-content-center">

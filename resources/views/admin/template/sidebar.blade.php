@@ -30,7 +30,7 @@
       <li class="nav-item">
         <a href="{{ route('admin.members.index') }}" class="nav-link {{ request()->routeIs('admin.members*') ? 'active' : '' }}">
           <i class="nav-icon fas fa-users"></i>
-          <p>Daftar Member</p>
+          <p>Daftar Pelanggan</p>
         </a>
       </li>
       <!-- <li class="nav-item">

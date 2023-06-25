@@ -48,10 +48,10 @@
             <form action="{{ route('admin.transactions.session.store') }}" method="post">
               @csrf
               <div class="form-group row">
-                <label for="name-member" class="col-sm-2 col-md-2 col-form-label">Nama Member</label>
+                <label for="name-member" class="col-sm-2 col-md-2 col-form-label">Nama Pelanggan</label>
                 <div class="col-sm-6 col-md-4">
                   <select class="form-control" id="id-member" name="member-id">
-                    <option value="" disabled selected>Pilih nama member</option>
+                    <option value="" disabled selected>Pilih nama pelanggan</option>
                     @if (isset($memberIdSessionTransaction))
                     <option value="{{ $memberIdSessionTransaction }}" selected>{{ $memberName[$memberIdSessionTransaction-2]->name }} </option>
 

@@ -8,6 +8,11 @@
   background-color: #1BBA96;
 }
 
+.about-container {
+  background-color: #1BBA96;
+  color: white;
+}
+
 .nav-link {
   font-size: 24px;
 }
@@ -46,6 +51,8 @@
   color: #fff !important;
   border-color: #B15C32 !important;
 }
+
+
 
 .services-title {
   font-weight: 800 !important;
@@ -142,5 +149,14 @@
   .container-fluid {
     margin-bottom: 40px;
   }
+
+  .header {
+    height: 100vh;
+  }
+
+  /* 
+  .services {
+    height: 100vh;
+  } */
 
 }

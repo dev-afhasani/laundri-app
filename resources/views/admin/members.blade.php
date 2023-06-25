@@ -1,6 +1,6 @@
 @extends('admin.template.main')
 
-@section('title', 'Daftar Member')
+@section('title', 'Daftar Pelanggan')
 @section('css')
 <link href="{{ asset('vendor/datatables-bs4/css/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 <link href="{{ asset('vendor/datatables-responsive/css/responsive.bootstrap4.min.css') }}" rel="stylesheet">
@@ -13,7 +13,7 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark">Daftar Member</h1>
+        <h1 class="m-0 text-dark">Daftar Pelanggan</h1>
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
@@ -30,8 +30,8 @@
               <thead class="thead-light">
                 <tr>
                   <th>No</th>
-                  <th>ID Member</th>
-                  <th>Nama Member</th>
+                  <th>ID Pelanggan</th>
+                  <th>Nama Pelanggan</th>
                   <th>Jenis Kelamin</th>
                   <th>Alamat</th>
                   <th>No Telp</th>

@@ -50,7 +50,7 @@
         @endif
         <div class="card">
           <div class="card-body">
-            <h5>Tambah Harga</h5>
+            <h5 class="mb-4">Tambah Harga</h5>
             <form action="{{ route('admin.price-lists.store') }}" method="post">
               @csrf
               <div class="row">

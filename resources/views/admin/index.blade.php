@@ -24,7 +24,7 @@
         <!-- small box -->
         <div class="small-box bg-success">
           <div class="inner">
-            <p>Jumlah Member</p>
+            <p>Jumlah Pelanggan</p>
             <h3>{{ $membersCount }}</h3>
           </div>
           <div class="icon">
@@ -89,7 +89,7 @@
               <thead class="thead-light">
                 <tr>
                   <th>No</th>
-                  <th>Nama Member</th>
+                  <th>Nama Pelanggan</th>
                   <th>Tanggal</th>
                   <th>Status</th>
                 </tr>
