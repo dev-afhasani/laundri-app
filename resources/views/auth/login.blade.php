@@ -5,8 +5,10 @@
 @section('container')
 <div class="container">
 
-  <div class="col-12 col-sm-11 col-md-8 col-lg-6 bg-light mx-auto mt-4 mb-4 px-3 py-5 px-5 rounded shadow-lg">
-    <h1 class="text-center mb-5">Login</h1>
+  <div class="col-12 col-sm-11 col-md-8 col-lg-4 bg-light mx-auto mt-5 py-5 rounded shadow-lg">
+    <div class="logo-wrapper text-center mb-4">
+      <img src="/img/laundri-logo.png" alt="" style="width:7em">
+    </div>
 
     @if (session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -22,8 +24,7 @@
     </div>
     @endif
 
-
-    <div class="login-form mb-4">
+    <div class="login-form mb-3 px-4">
       <form action="" method="post">
         @csrf
 
@@ -51,14 +52,14 @@
           <button class="btn btn-primary">Login</button>
         </div>
       </form>
+      <hr class="mt-4">
     </div>
-    <hr>
     <div class="text-center mt-4">
-      <a href="/register" class="text-decoration-none text-color-theme" type="submit">Belum punya akun? Daftar!</a>
+      Belum punya akun? <a href="/register" class="login-register-link text-decoration-none text-color-theme fw-semibold" type="submit">Daftar sekarang!</a>
     </div>
 
   </div>
 
-  <p class="text-center mb-4 fw-semibold">Copyright &copy; 2023 Laundri All rights reserved.</p>
+  <p class="text-center text-light my-4 fw-semibold">Copyright &copy; 2023 Laundri All rights reserved.</p>
 </div>
 @endsection

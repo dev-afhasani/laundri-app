@@ -12,11 +12,11 @@
 </head>
 
 <body class="bg-auth">
-  <nav class="navbar bg-navbar-auth">
+  <!-- <nav class="navbar bg-navbar-auth">
     <div class="container mt-2">
       <a class="navbar-brand fw-bold" href="/">Laundri</a>
     </div>
-  </nav>
+  </nav> -->
 
   @yield('container')
 

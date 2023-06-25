@@ -32,8 +32,9 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-bg elevation-5">
       <!-- Brand Logo -->
-      <a href="/admin" class="brand-link mt-2" style="text-decoration: none;">
-        <h4 class="brand-text text-center text-light">Laundri</h4>
+      <a href="/admin" class="brand-link mt-2 ">
+        <img src="/img/icon-brand.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-2" style="opacity: .8">
+        <span class="brand-text text-light">Laundri</span>
       </a>
 
       <!-- Sidebar -->

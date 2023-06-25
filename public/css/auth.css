@@ -9,3 +9,7 @@
 .text-color-theme {
   color: #1BBA96;
 }
+
+.login-register-link:hover {
+  color: #386069;
+}
