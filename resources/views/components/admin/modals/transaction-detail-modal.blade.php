@@ -1,5 +1,5 @@
 <div class="modal fade" id="transactionDetailModal" tabindex="-1" role="dialog" aria-labelledby="transactionDetailModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-xl" role="document">
+  <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="transactionDetailModalLabel">Detail Transaksi</h5>
@@ -9,21 +9,23 @@
       </div>
       <div class="modal-body">
         <h5>ID Transaksi: <span id="id-transaksi-detail"></span></h5>
-        <table id="" class="table dt-responsive nowrap table-responsive" style="width: 100%">
-          <thead class="thead-light">
-            <tr>
-              <th>No</th>
-              <th>Barang</th>
-              <th>Servis</th>
-              <th>Kategori</th>
-              <th>Banyak</th>
-              <th>Harga</th>
-              <th>Sub Total</th>
-            </tr>
-          </thead>
-          <tbody id="tbl-ajax">
-          </tbody>
-        </table>
+        <div class="">
+          <table id="" class="table table-responsive-lg">
+            <thead class="thead-light">
+              <tr>
+                <th>No</th>
+                <th>Barang</th>
+                <th>Servis</th>
+                <th>Kategori</th>
+                <th>Banyak</th>
+                <th>Harga</th>
+                <th>Sub Total</th>
+              </tr>
+            </thead>
+            <tbody id="tbl-ajax">
+            </tbody>
+          </table>
+        </div>
         <h5>Tipe Servis: <span id="service-type"></span></h5>
         <h5>Dibayar: <span id="payment-amount"></span></h5>
       </div>

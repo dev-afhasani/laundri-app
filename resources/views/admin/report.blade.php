@@ -1,5 +1,7 @@
 @extends('admin.template.main')
 
+@section('title', 'Laporan Keuangan')
+
 @section('css')
 <meta name="csrf-token" content="{{ csrf_token() }}">
 <meta name="base_url" content="{{ url('admin') }}">
