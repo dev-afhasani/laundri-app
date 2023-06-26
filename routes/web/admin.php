@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\VoucherController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -60,4 +61,13 @@ Route::group([
   Route::get('/session/{rowId}', [TransactionSessionController::class, 'destroy'])->name('session.destroy');
 
   Route::get('/print/{transaction}', [PrintTransactionController::class, 'index'])->name('print.index');
+});
+
+Route::group([
+  'prefix' => 'reports',
+  'as' => 'reports.',
+], function () {
+  Route::get('/', [ReportController::class, 'index'])->name('index');
+  Route::post('/print', [ReportController::class, 'print'])->name('print');
+  Route::post('/get-month', [ReportController::class, 'getMonth'])->name('get-month');
 });

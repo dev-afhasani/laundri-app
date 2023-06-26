@@ -40,7 +40,7 @@
         </a>
       </li> -->
       <li class="nav-item">
-        <a href="" class="nav-link {{ request()->routeIs('admin.reports.index') ? 'active' : '' }}">
+        <a href="{{ route('admin.reports.index') }}" class="nav-link {{ request()->routeIs('admin.reports.index') ? 'active' : '' }}">
           <i class="nav-icon fas fa-file-alt"></i>
           <p>Laporan Keuangan</p>
         </a>

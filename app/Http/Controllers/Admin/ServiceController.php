@@ -21,6 +21,13 @@ class ServiceController extends Controller
       'service_name' => ['required'],
     ]);
 
+    if (Service::where([
+      'name' => $request->input('service_name')
+    ])->exists()) {
+      return redirect()->route('admin.price-lists.index')
+        ->with('error', 'Servis tidak dapat ditambah karena sudah tersedia!');
+    }
+
     $service = new Service([
       'name' => ucfirst($request->input('service_name'))
     ]);

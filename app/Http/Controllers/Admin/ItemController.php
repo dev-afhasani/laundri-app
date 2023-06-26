@@ -24,6 +24,14 @@ class ItemController extends Controller
     $item = new Item([
       'name' => ucfirst($request->input('item_name'))
     ]);
+
+    if (Item::where([
+      'name' => $request->input('item_name')
+    ])->exists()) {
+      return redirect()->route('admin.price-lists.index')->with('error', 'Barang tidak dapat ditambah karena sudah tersedia!');
+    }
+
+
     $item->save();
 
     return redirect()->route('admin.price-lists.index')
