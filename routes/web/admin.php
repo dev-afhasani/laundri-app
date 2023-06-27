@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\VoucherController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PriceListController;
+use App\Http\Controllers\Admin\RincianPengeluaran;
 use App\Http\Controllers\Admin\ServiceTypeController;
 use App\Http\Controllers\Admin\Transaction\TransactionController;
 use App\Http\Controllers\Admin\Transaction\PrintTransactionController;
@@ -70,4 +71,11 @@ Route::group([
   Route::get('/', [ReportController::class, 'index'])->name('index');
   Route::post('/print', [ReportController::class, 'print'])->name('print');
   Route::post('/get-month', [ReportController::class, 'getMonth'])->name('get-month');
+});
+
+Route::group([
+  'prefix' => 'rincian-pengeluaran',
+  'as' => 'rincian-pengeluaran.'
+], function () {
+  Route::get('/', [RincianPengeluaran::class, 'index'])->name('index');
 });

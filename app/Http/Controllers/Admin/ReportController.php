@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Financial;
 use App\Models\Transaction;
 use DateTime;
 use Illuminate\Contracts\View\View;
@@ -25,7 +26,12 @@ class ReportController extends Controller
     $years = Transaction::selectRaw('YEAR(created_at) as Tahun')->distinct()->get();
     // $months = Transaction::selectRaw('MONTH(created_at) as Bulan')->distinct()->get();
 
-    return view('admin.report', compact('user', 'years'));
+    $pemasukan = Transaction::sum('total');
+    $pengeluaran = Financial::sum('pengeluaran');
+
+    $keuntungan = $pemasukan - $pengeluaran;
+
+    return view('admin.report', compact('user', 'years', 'pemasukan', 'pengeluaran', 'keuntungan'));
   }
 
   /**
