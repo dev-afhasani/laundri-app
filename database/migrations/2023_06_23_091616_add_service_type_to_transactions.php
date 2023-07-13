@@ -13,10 +13,10 @@ return new class extends Migration
    */
   public function up()
   {
-    Schema::table('transactions', function (Blueprint $table) {
-      $table->foreignId('service_type_id')->after('status_id')->nullable()->constrained();
-      $table->unsignedInteger('service_cost')->after('finish_date')->default(0);
-    });
+    // Schema::table('transactions', function (Blueprint $table) {
+    //   $table->foreignId('service_type_id')->after('status_id')->nullable()->constrained();
+    //   $table->unsignedInteger('service_cost')->after('finish_date')->default(0);
+    // });
   }
 
   /**
@@ -26,9 +26,9 @@ return new class extends Migration
    */
   public function down()
   {
-    Schema::table('transactions', function (Blueprint $table) {
-      $table->dropColumn('service_type_id');
-      $table->dropColumn('service_cost');
-    });
+    // Schema::table('transactions', function (Blueprint $table) {
+    //   $table->dropColumn('service_type_id');
+    //   $table->dropColumn('service_cost');
+    // });
   }
 };

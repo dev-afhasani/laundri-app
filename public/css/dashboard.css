@@ -6,6 +6,15 @@ nav>ul>li>a>p {
   color: white;
 }
 
+nav>ul>li>ul>li>a>p {
+  color: white;
+}
+
+nav>ul>li>ul>li>a>i {
+  color: white;
+
+}
+
 nav>ul>li>a>i {
   color: white;
 }

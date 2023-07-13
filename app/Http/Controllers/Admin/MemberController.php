@@ -10,11 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class MemberController extends Controller
 {
-  /**
-   * Show member view
-   *
-   * @return \Illuminate\Contracts\View\View
-   */
+  // menampilkan daftar pelanggan
   public function index(): View
   {
     $user = Auth::user();

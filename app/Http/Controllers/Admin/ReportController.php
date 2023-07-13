@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Financial;
+use App\Models\Pengeluaran;
 use App\Models\Transaction;
 use DateTime;
 use Illuminate\Contracts\View\View;
@@ -27,7 +28,7 @@ class ReportController extends Controller
     // $months = Transaction::selectRaw('MONTH(created_at) as Bulan')->distinct()->get();
 
     $pemasukan = Transaction::sum('total');
-    $pengeluaran = Financial::sum('pengeluaran');
+    $pengeluaran = Pengeluaran::sum('harga');
 
     $keuntungan = $pemasukan - $pengeluaran;
 
@@ -79,9 +80,7 @@ class ReportController extends Controller
   {
     $year = $request->input('year', now()->year);
     $month = Transaction::whereYear('created_at', $year)
-      ->selectRaw('MONTH(created_at) as Bulan')
-      ->distinct()
-      ->get();
+      ->selectRaw('MONTH(created_at) as Bulan')->distinct()->get();
 
     return response()->json($month);
   }

@@ -15,13 +15,15 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0 text-dark">Laporan Keuangan</h1>
+        <h1 class="m-0 text-dark">Dashboard</h1>
       </div><!-- /.col -->
     </div><!-- /.row -->
   </div><!-- /.container-fluid -->
 </div>
+
+
 <!-- /.content-header -->
-<div class="content">
+<!-- <div class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
@@ -47,9 +49,7 @@
                     <label for="bulan" class="col-sm-4 col-form-label">Bulan</label>
                     <div class="col-sm-6">
                       <select class="form-control" id="bulan" name="month">
-                        <option value="0" selected="selected" disabled="true">-- Select
-                          Year
-                          First --</option>
+                        <option value="0" selected="selected" disabled="true">-- Pilih Tahun dulu --</option>
                       </select>
                     </div>
                   </div>
@@ -61,8 +61,9 @@
         </div>
       </div>
     </div>
-  </div><!-- /.container-fluid -->
-</div>
+  </div> -->
+<!-- /.container-fluid -->
+<!-- </div> -->
 
 
 <div class="content">
@@ -71,42 +72,128 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <div class="row">
-              <div class="col-sm-12 col-md-6 col-lg-4">
+            <!-- PEMASUKAN -->
+            <div class="row pemasukan">
+
+              <!-- pemasukan harian -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <!-- small box -->
-                <div class="small-box bg-info">
+                <div class="small-box bg-success">
                   <div class="inner">
-                    <p>Pemasukan</p>
-                    <h3>Rp {{ $pemasukan }} </h3>
+                    <p>Pemasukan hari ini</p>
+                    <h4>Rp {{ number_format($totalPemasukanHarian, 0, ',', '.') }}</h4>
                   </div>
                   <div class="icon">
-                    <i class="ion ion-ios-people"></i>
+                    <i class="ion ion-stats-bars"></i>
                   </div>
                   <a href="" style="pointer-events: none;" class="disabled small-box-footer"><i class="fas fa"></i></a>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
+
+              <!-- pemasukan bulanan -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <!-- small box -->
+                <div class="small-box bg-primary">
+                  <div class="inner">
+                    <p>Pemasukan bulan ini</p>
+                    <h4>Rp {{ number_format($totalPemasukanBulanan, 0, ',', '.') }} </h4>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="" style="pointer-events: none;" class="disabled small-box-footer"><i class="fas fa"></i></a>
+                </div>
+              </div>
+
+              <!-- pemasukan tahunan -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                  <div class="inner">
+                    <p>Pemasukan tahun ini</p>
+                    <h4>Rp {{ number_format($totalPemasukanTahunan, 0, ',', '.') }} </h4>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="" style="pointer-events: none;" class="disabled small-box-footer"><i class="fas fa"></i></a>
+                </div>
+              </div>
+
+              <!-- seluruh pemasukan -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <!-- small box -->
+                <div class="small-box bg-secondary">
+                  <div class="inner">
+                    <p>Seluruh pemasukan</p>
+                    <h4>Rp {{ number_format($seluruhPemasukan, 0, ',', '.') }}</h4>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="" style="pointer-events: none;" class="small-box-footer"><i class="fas fa"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PENGELUARAN -->
+            <div class="row pengeluaran">
+
+              <!-- pengeluaran harian -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <!-- small box -->
                 <div class="small-box bg-danger">
                   <div class="inner">
-                    <p>Pengeluaran</p>
-                    <h3>Rp {{ $pengeluaran }} </h3>
+                    <p>Pengeluaran hari ini</p>
+                    <h4 class="">Rp {{ number_format($totalPengeluaranHarian, 0, ',', '.') }} </h4>
                   </div>
                   <div class="icon">
-                    <i class="ion ion-ios-people"></i>
+                    <i class="ion ion-stats-bars"></i>
                   </div>
-                  <a href=" {{ route('admin.rincian-pengeluaran.index') }} " class="small-box-footer">Tambah pengeluaran <i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="" style="pointer-events: none;" class="disabled small-box-footer"><i class="fas fa"></i></a>
                 </div>
               </div>
-              <div class="col-sm-12 col-md-6 col-lg-4">
+
+              <!-- pengeluaran bulanan -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
                 <!-- small box -->
-                <div class="small-box bg-success">
+                <div class="small-box bg-danger">
                   <div class="inner">
-                    <p>Keuntungan</p>
-                    <h3>Rp {{ $keuntungan }} </h3>
+                    <p>Pengeluaran bulan ini</p>
+                    <h4>Rp {{ number_format($totalPengeluaranBulanan, 0, ',', '.') }}</h4>
                   </div>
                   <div class="icon">
-                    <i class="ion ion-ios-people"></i>
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="" style="pointer-events: none;" class="disabled small-box-footer"><i class="fas fa"></i></a>
+                </div>
+              </div>
+
+              <!-- pengeluaran tahunan -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <!-- small box -->
+                <div class="small-box bg-danger">
+                  <div class="inner">
+                    <p>Pengeluaran tahun ini</p>
+                    <h4>Rp {{ number_format($totalPengeluaranTahunan, 0, ',', '.') }}</h4>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
+                  </div>
+                  <a href="" style="pointer-events: none;" class="disabled small-box-footer"><i class="fas fa"></i></a>
+                </div>
+              </div>
+
+              <!-- seluruh pemasukan -->
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <!-- small box -->
+                <div class="small-box bg-dark">
+                  <div class="inner">
+                    <p>Seluruh pengeluaran</p>
+                    <h4>Rp {{ number_format($seluruhPengeluaran, 0, ',', '.') }} </h4>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-stats-bars"></i>
                   </div>
                   <a href="" style="pointer-events: none;" class="small-box-footer"><i class="fas fa"></i></a>
                 </div>

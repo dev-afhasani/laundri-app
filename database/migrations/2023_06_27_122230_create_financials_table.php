@@ -13,8 +13,11 @@ return new class extends Migration
   {
     Schema::create('financials', function (Blueprint $table) {
       $table->id();
-      $table->integer('pengeluaran');
-      $table->integer('keuntungan');
+      $table->date('tanggal');
+      $table->foreignId('financial_category_id')->constrained();
+      $table->string('keterangan');
+      $table->integer('pemasukan')->default(0);
+      $table->integer('pengeluaran')->default(0);
       $table->timestamps();
     });
   }

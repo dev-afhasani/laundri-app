@@ -52,7 +52,7 @@
 
     <!-- Main Footer -->
     <footer class="main-footer">
-      Copyright &copy; 2022 {{ config('app.name') }} All rights reserved.
+      Copyright &copy; 2023 {{ config('app.name') }} All rights reserved.
     </footer>
 
 

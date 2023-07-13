@@ -39,11 +39,37 @@
           <p>Voucher</p>
         </a>
       </li> -->
-      <li class="nav-item">
-        <a href="{{ route('admin.reports.index') }}" class="nav-link {{ request()->routeIs('admin.reports.index') ? 'active' : '' }}">
+      <li class="nav-item menu-open">
+        <a href="" class="nav-link ">
           <i class="nav-icon fas fa-file-alt"></i>
-          <p>Laporan Keuangan</p>
+          <p>Laporan Keuangan
+            <i class="right fas fa-angle-left"></i>
+          </p>
         </a>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="{{ route('admin.financials.index') }}" class="ml-4 nav-link {{ request()->routeIs('admin.financials.index') ? 'active' : '' }}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="{{ route('admin.financials.category') }}" class="ml-4 nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Kategori</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="nav nav-treeview">
+          <li class="nav-item">
+            <a href="{{ route('admin.financials.finance') }}" class="ml-4 nav-link">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Data Keuangan</p>
+            </a>
+          </li>
+        </ul>
       </li>
       <li class="nav-item">
         <a href="" class="nav-link" data-toggle="modal" data-target="#logoutModal">

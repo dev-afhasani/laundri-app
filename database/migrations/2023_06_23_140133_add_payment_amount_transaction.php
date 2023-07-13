@@ -13,9 +13,9 @@ return new class extends Migration
    */
   public function up()
   {
-    Schema::table('transactions', function (Blueprint $table) {
-      $table->integer('payment_amount')->default(0);
-    });
+    // Schema::table('transactions', function (Blueprint $table) {
+    //   $table->integer('payment_amount')->default(0);
+    // });
   }
 
   /**
@@ -25,8 +25,8 @@ return new class extends Migration
    */
   public function down()
   {
-    Schema::table('transactions', function (Blueprint $table) {
-      $table->dropColumn('payment_amount');
-    });
+    // Schema::table('transactions', function (Blueprint $table) {
+    //   $table->dropColumn('payment_amount');
+    // });
   }
 };
