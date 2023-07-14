@@ -80,5 +80,6 @@ Route::group([
 ], function () {
   Route::get('/', [DashboardKeuanganController::class, 'index'])->name('index');
   Route::get('/category', [KategoriKeuanganController::class, 'index'])->name('category');
+  Route::post('/category', [KategoriKeuanganController::class, 'store'])->name('category.store');
   Route::get('/finance', [KeuanganController::class, 'index'])->name('finance');
 });

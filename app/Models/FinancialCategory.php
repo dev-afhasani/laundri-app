@@ -11,7 +11,7 @@ class FinancialCategory extends Model
   use HasFactory;
 
   protected $fillable = [
-    'nama'
+    'name'
   ];
 
   public function financial(): HasMany

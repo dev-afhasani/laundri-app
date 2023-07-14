@@ -32,14 +32,18 @@
             </div>
             <table id="tbl-finance" class="table dt-responsive nowrap" style="width: 100%">
               <thead class="thead-light">
-                <tr>
-                  <th style="width: 5%;">No</th>
-                  <th>Tanggal</th>
-                  <th>Kategori</th>
-                  <th>Keterangan</th>
+
+                <tr class="text-center">
+                  <th style="width: 5%;" rowspan="2" class="align-middle">No</th>
+                  <th rowspan="2" class="align-middle">Tanggal</th>
+                  <th rowspan="2" class="align-middle">Kategori</th>
+                  <th rowspan="2" class="align-middle">Keterangan</th>
+                  <th colspan="2" class="align-middle">Jenis</th>
+                  <th rowspan="2" class="text-center align-middle">Aksi</th>
+                </tr>
+                <tr class="text-center">
                   <th>Pemasukan</th>
                   <th>Pengeluaran</th>
-                  <th class="text-center">Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -47,8 +51,8 @@
                 <tr>
                   <td> {{ $loop->iteration }} </td>
                   <td> {{ $f->tanggal }} </td>
-                  <td> {{ $f->keterangan }} </td>
                   <td> {{ $f->financial_category->name }} </td>
+                  <td> {{ $f->keterangan }} </td>
                   <td> {{ $f->pemasukan }} </td>
                   <td> {{ $f->getFormattedPengeluaran() }} </td>
                   <td>
@@ -81,7 +85,8 @@
   $(document).ready(function() {
     $('#tbl-finance').DataTable({
       'bInfo': false,
-      "bLengthChange": false,
+      'bLengthChange': false,
+
     });
   });
 </script>

@@ -8,19 +8,19 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action=" {{ route('admin.financials.category.store') }} " method="post">
           @csrf
           <div class="mb-3">
             <div class="form-group">
               <label for="name">Nama</label>
-              <input type="text" class="form-control" id="name" name="cat_name">
+              <input type="text" class="form-control" id="name" name="cat_name" required>
             </div>
           </div>
-        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Tambah</button>
+        <button type="submit" class="btn btn-primary">Tambah</button>
+        </form>
       </div>
     </div>
   </div>

@@ -56,7 +56,7 @@
         </ul>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ route('admin.financials.category') }}" class="ml-4 nav-link">
+            <a href="{{ route('admin.financials.category') }}" class="ml-4 nav-link {{ request()->routeIs('admin.financials.category') ? 'active' : '' }}">
               <i class="far fa-circle nav-icon"></i>
               <p>Kategori</p>
             </a>
@@ -64,7 +64,7 @@
         </ul>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ route('admin.financials.finance') }}" class="ml-4 nav-link">
+            <a href="{{ route('admin.financials.finance') }}" class="ml-4 nav-link {{ request()->routeIs('admin.financials.finance') ? 'active' : '' }}">
               <i class="far fa-circle nav-icon"></i>
               <p>Data Keuangan</p>
             </a>
