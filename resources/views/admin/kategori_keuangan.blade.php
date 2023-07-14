@@ -21,13 +21,17 @@
   </div><!-- /.container-fluid -->
 </div>
 
+
 <div class="content">
   <div class="container-fluid">
     <div class="row">
       <div class="col-12">
         <div class="card">
           <div class="card-body">
-            <a href="" class="btn btn-primary">Tambah Kategori</a>
+            <div class="float-left">
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#financeCatModal"><i class="fas fa-plus"></i> Tambah Kategori </a>
+            </div>
+
             <table id="tbl-category" class="table dt-responsive nowrap" style="width: 100%">
               <thead class="thead-light">
                 <tr>
@@ -57,6 +61,11 @@
 </div>
 @endsection
 
+@section('modals')
+<x-admin.modals.add-finance-category-modal />
+@endsection
+
+
 @section('scripts')
 <script src="{{ asset('vendor/datatables/jquery.dataTables.min.js') }}"></script>
 <script src="{{ asset('vendor/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
@@ -67,6 +76,7 @@
     $('#tbl-category').DataTable({
       'bInfo': false,
       "bLengthChange": false,
+      // 'searching': false
     });
   });
 </script>

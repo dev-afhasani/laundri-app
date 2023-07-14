@@ -27,6 +27,9 @@
       <div class="col-12">
         <div class="card">
           <div class="card-body">
+            <div class="float-left">
+              <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#dataKeuanganModal"><i class="fas fa-plus"></i> Tambah Data </a>
+            </div>
             <table id="tbl-finance" class="table dt-responsive nowrap" style="width: 100%">
               <thead class="thead-light">
                 <tr>
@@ -62,6 +65,11 @@
     </div>
   </div>
 </div>
+@endsection
+
+
+@section('modals')
+<x-admin.modals.add-data-keuangan-modal />
 @endsection
 
 @section('scripts')
